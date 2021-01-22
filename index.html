@@ -3,10 +3,150 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+
   </head>
   <body>
+    <header>
+      <nav>
+          <ul>
+              <li>
+                  <a href="">Информация</a>
+              </li>
+              <li>
+                  <a href="Фото и видео"></a>
+              </li>
+              <li>
+                  <a href="">Карта штата</a>
+              </li>
+              <li>
+                  <a href="">Гостиницы</a>
+              </li>
+          </ul>
+          <a href="">
+            <img src="" width="" height="" alt="логотип">
+          </a>
+      </nav>
+    </header>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
+    <main>
+      <section>
+          <!-- фотку и нижнюю рамку к ней положить фоном в CSS-->
+          <img src="" height="" width="" alt="welcome">                                  <!--SVG наверное-->
+          <img src="" height="" width="" alt="to the gorgeous">                          <!--SVG наверное-->
+          <img src="" height="" width="" alt="becouse thr grand canyon sucks!">          <!--SVG наверное-->
+          <h1>Седона — небольшой городок в Аризоне, заслуживающий большего! </h1>
+      </section>
+      <section>
+        <h2>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</h2>
+        <ul>
+            <li>
+                <h3>Настоящий городок</h3>
+                <p>— №1 —</p>
+                <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
+                <img src="" height="" width="" alt="фото города">
+                <ul>
+                    <li>
+                      <h4>Жильё</h4>
+                      <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+                    </li>
+                    <li>
+                      <h4>Еда</h4>
+                      <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+                    </li>
+                    <li>
+                      <h4>Сувениры</h4>
+                      <p>Не только китайского, но и местного производства!</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <h3>Там есть Мост дьявола </h3>
+                <p>— №2 —</p>
+                <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+                <img src="" height="" width="" alt="фото моста дь  явола"  >
+            </li>
+            <li>
+                <h3>небольшая площадь</h3>
+                <p>— №3 —</p>
+                <p>все достопримечательности находятся очень близко</p>
+            </li>
+            <li>
+                <h3>красивая дорога</h3>
+                <p>— №4 —</p>
+                <p>ехать в седону из лас-вегаса совсем не скучно!</p>
+            </li>
+            <li>
+                <h3>мало туристов</h3>
+                <p>— №5 —</p>
+                <p>большинство едет в гранд каньон и толпится там</p>
+            </li>
+
+        </ul>
+      </section>
+      <section>
+        <h2>Заинтересовались?</h2>
+        <p>  Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне  </p>
+        <button type="button" for="search" checked>Поиск гостиницы В Седоне</button>
+        <img height="" width="" alt="карта Седоны">
+      </section>
+    </main>
+
+  <footer>
+    <section>
+      <h2>контакты</h2>
+      <p>#visitSEDONA</p>
+      <a href="tel:+74956660166">ТЕЛ: +7(495) 666-01-66</a>
+    </section>
+    <section>
+      <h2>соц. сети</h2>
+      <ul>
+        <li>
+          <a href="https://www.figma.com/file/ASeQqd0fG7Ug51ssFdapgv/HTML-1-%D0%A1%D0%B5%D0%B4%D0%BE%D0%BD%D0%B0?node-id=7%3A6">twitter</a>
+        </li>
+        <li>
+          <a href="https://www.figma.com/file/ASeQqd0fG7Ug51ssFdapgv/HTML-1-%D0%A1%D0%B5%D0%B4%D0%BE%D0%BD%D0%B0?node-id=7%3A5">face book</a>
+        </li>
+        <li>
+          <a href="https://www.figma.com/file/ASeQqd0fG7Ug51ssFdapgv/HTML-1-%D0%A1%D0%B5%D0%B4%D0%BE%D0%BD%D0%B0?node-id=7%3A7">youtube</a>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h2>разработчик сайта</h2>
+      <a href="https://www.figma.com/file/ASeQqd0fG7Ug51ssFdapgv/HTML-1-%D0%A1%D0%B5%D0%B4%D0%BE%D0%BD%D0%B0?node-id=7%3A11">
+        <img src="" height="" width="" alt="logo-htmlacademy">
+      </a>
+    </section>
+  </footer>
+
+  <section>
+    <form action="#" method="get" id="search">
+      <label>
+          Дата заезда:<input type="date" name="Arrival_date" value="24 апреля 2017" id="Arrival">
+      </label><br>
+      <input type="image" src="" alt="календарик" for="Arrival">
+      <label>
+          Дата выезда:<input type="date" name="Date_of_departure" value="24 апреля 2017" id="departure">
+      </label><br>
+      <input type="image" src="" alt="календарик" for="departure">
+      <label>
+          Взрослые:<input type="text" name="adult" value="2" id="big">
+      </label>
+      <input type="image" src="" alt="-" for="big">
+      <input type="image" src="" alt="+" for="big">
+      <label>
+          Дети:<input type="text" name="children" value="0" id="child">
+      </label>
+      <input type="image" src="" alt="_" for="child">
+      <input type="image" src="" alt="+" for="child"><br>
+      <input type="submit" value="найти">
+    </form>
+  </section>
 
   </body>
 </html>
+
+
+
+
+<p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
