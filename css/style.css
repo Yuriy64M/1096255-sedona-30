@@ -1,0 +1,488 @@
+:root {
+    --white: #FFFFFF;
+    --white-opacity: rgba(255, 255, 255, 0.9);
+    --white-opacity-light: rgba(255, 255, 255, 0.3);
+    --blue: #81B3D2;
+    --blue-hover:#669EC0;
+    --blue-active:#5496BD;
+    --black: #000000;
+    --black-opacity: rgba(0, 0, 0, 0.3);
+    --gray: #EEEEEE;
+    --brown: #766357;
+    --brown-darcker: #604E43;
+    --brown-darckest: #503E33;
+    --background-gray: #888888;
+    --gray-input: #F2F2F2;
+    --gray-icon-decor: #A9A9A9;
+    --gray-rating: #666666;
+    --gray-up-dir: #CACACA;
+    --light-black: #333333;
+    --gray-hover: #EBEBEB;
+}
+
+body {
+  font-family: "PT Sans", Arial, sans-serif;
+  background-color: var(--white);
+  min-width: 1200px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+                                                            /*header*/
+
+
+.list-navigation {
+    color: var(--black);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 26px;
+}
+
+.list-navigation ul {
+      list-style: none;
+}
+
+.list-navigation a {
+      text-decoration: none;
+      color: var(--black);
+}
+
+/*.list-navigation a:link {
+      text-decoration: none;
+      color: var(--black);
+}*/                                                          /*четвертое состояние в стайлгаде. Что и Как*/
+
+/*.list-navigation a:visited {
+      text-decoration: none;
+      color: var(--brown);
+}*/
+
+.list-navigation a:hover {
+      text-decoration: none;
+      color: var(--blue);
+}
+
+.list-navigation a:active {
+      text-decoration: none;
+      color: var(--black-opacity);
+}
+
+.list-navigation a:focus {
+      text-decoration: none;
+      color: var(--brown);
+    }
+
+                                                              /*header*/
+
+
+                                                          /*section entry*/
+.entry {
+    background-image: url("../img/background_photo.png"); /*нет маски. хотя в файле есть маска*/
+    background-repeat: no-repeat;
+    background-color: var(--white);
+}
+
+h1 {
+  color: var(--black);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+
+                                                            /*section entry*/
+
+
+                                                            /*section list-profit*/
+.list-profit h2 {
+  color: var(--light-black);
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.list-profit ul {
+  list-style: none;
+  text-transform: uppercase;
+}
+
+.list-profit h3, h4 {
+  font-size: 21px;
+  line-height: 21px;
+}
+
+.list-profit p {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.list-item-profit>li:nth-child(odd) {
+    color: var(--white);
+    background-color: var(--blue);
+}
+
+.list-item-profit>li:nth-child(n+3) {
+    color: var(--light-black);
+    background-color: var(--gray);
+}
+
+.list-item-profit>li:nth-child(n+3) h3{
+    color: var(--black);
+
+}
+
+.profit-town {
+    color: var(--black);
+    background-color: var(--white);
+}
+
+.profit-town p{
+    color: var(--light-black);
+}
+
+.profit-town li:nth-child(2)::before {
+  background-image: url(../img/food.png);/*не работает*/
+  background-repeat: no-repeat;
+  content: "";
+}
+
+.profit-town li:nth-child(1)::before {
+  background-image: url(../img/housing.png);/*не работает*/
+  background-repeat: no-repeat;
+  content: "";
+}
+
+.profit-town li:nth-child(3)::before {
+  content: "";
+  background-image: url(../img/souvenirs.png);/*не работает*/
+  background-repeat: no-repeat;
+}
+                                                           /*section list-profit*/
+
+
+                                                           /*search-help*/
+.search-help {
+    text-transform: uppercase;
+    background-color: inherit;
+}
+
+
+.search-help h2{
+  color: var(--black);
+  font-size:  30px;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+.search-help p{
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--light-black);
+}
+
+.search-hotel {
+  color: var(--white);
+  font-size: 21px;
+  line-height: 26px;
+  background-color: var(--brown);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.search-hotel:hover {
+  background-color: var(--brown-darcker);
+}
+
+.search-hotel:active {
+  background-color: var(--brown-darckest);
+  color: var(--white-opacity-light);
+}
+                                                           /*search-help*/
+
+
+                                                           /*footer*/
+.main-footer {
+    background-color: var(--white-opacity);
+    color: var(--black);
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.contacts, .contacts a {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  list-style: none;
+  color: inherit;
+}
+
+.site-developer p {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: normal;
+}
+                                                              /*social*/
+
+.social {
+    list-style: none;
+    width:46px;
+    height:48px;
+
+  /*  background-color: var(--blue);*/
+}
+
+.social-item {
+    background-color: var(--blue);
+}
+
+.social-item:hover {
+    background-color: var(--blue-hover);
+}
+
+.social-item:active {
+    background-color: var(--blue-active);
+}
+
+.social-twitter {
+    padding: 17px 15px;
+    display: inline-block;
+  }
+
+  .social-facebook {
+      padding: 13px 17px;
+      display: inline-block;
+  }
+
+  .social-Youtube {
+      padding: 16px 13px;
+      display: inline-block;
+  }
+
+  .social-Youtube:active svg, .social-facebook:active svg, .social-twitter:active svg{
+      opacity: 0.3;
+  }
+                                                            /*social*/
+
+.site-developer svg:hover {
+    background-color: var(--blue); /*атрибут fill менять с помощью JS*/
+
+}
+                                                            /*footer*/
+
+
+                                                            /*modal*/
+
+.modal {
+    color: var(--black);
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 26px;
+    text-transform: uppercase;
+}
+
+.modal input {
+  color: var(--black);
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 26px;
+  text-transform: uppercase;
+  background-color: var(--gray-input);
+}
+
+.modal input[type="text"]:hover {
+  background-color: var(--gray-hover);
+}
+
+.modal input[type="text"]:focus {
+  background-color: var(--white);
+}
+
+.modal input[type="submit"] {
+  color: var(--white);
+  background-color: var(--blue);
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.modal input[type="submit"]:hover {
+  background-color: var(--blue-hover);
+}
+
+.modal input[type="submit"]:active {
+  background-color: var(--blue-active);
+  color: var(--white-opacity-light);
+}
+                                                            /*modal*/
+
+
+
+
+
+                                                              /*catalog*/
+
+.main-catalog {
+  text-transform: uppercase;
+
+}
+
+                                                            /*filter*/
+.filter {
+    background-image: url("../img/background_for_catalog.png");
+    background-color: var(--blue);
+    background-repeat: no-repeat;
+}
+
+.filter form {
+    color: var(--white);
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.filter legend {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.filter input {                                    /*сделать поля прозрачными*/
+   text-transform: uppercase;
+    opacity: 0.1;
+    color: var(--white);
+}
+
+
+.text-label {
+/*  color: var(--white);*/
+}
+
+.filter fieldset {
+  /*  display: flex;*/
+
+}
+
+.filter input[value="показать"]:hover, .filter input[value="показать"]:focus {
+  background-color: var(--white);
+  color: var(--black);
+}
+                                                            /*filter*/
+
+                                                            /*sorting*/
+
+.sorting a{
+  list-style: style;
+  text-decoration: none;
+  color: var(--black-opacity);
+}
+
+.sorting a:focus{
+    color: var(--blue);
+}
+
+.sorting a:hover{
+    color: var(--blue);
+    text-decoration: underline dotted;
+}
+
+.sorting a:active{
+    color: var(--black);
+    text-decoration: none;
+}
+
+/*.sorting svg:hover { }          /*стрелки хз как делать*/
+
+                                                            /*sorting*/
+
+                                                            /*filter-result*/
+
+.filter-result ul {
+    list-style: none;
+}
+
+.filter-result a {
+    list-style: none;
+    text-decoration: none;
+  /*  color: var(--black);*/
+}
+
+.hotel-name {
+  color: var(--black);
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+}
+.filter-result .hotel-name:hover {
+  color: var(--blue);
+}
+
+.filter-result .hotel-name:active {
+  color: var(--black-opacity);
+}
+
+.read-more, .reservation {
+  color: var(--white);
+}
+
+.read-more {
+  background-color: var(--blue);
+  color: var(--white);
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.read-more:hover {
+  background-color: var(--blue-hover);
+}
+
+.read-more:active {
+  background-color: var(--blue-active);
+  color: var(--white-opacity-light);
+}
+
+.reservation {
+  background-color: var(--brown);
+  color: var(--white);
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.reservation:hover {
+  background-color: var(--brown-darcker);
+}
+
+.reservation:active {
+  background-color: var(--brown-darckest);
+  color: var(--white-opacity-light);
+}
+
+.rating {
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--gray-rating);
+  background-color: var(--gray-input);
+}
+
+.rating::before {
+  content: "";                                          /*звезда не отображается*/
+  background-image: url("../img/icon/star.svg");
+  background-repeat: repeat-x ;
+}
+                                                            /*filter-result*/
+                                                              /*catalog*/
