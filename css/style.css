@@ -26,16 +26,7 @@ body {
   min-width: 1200px;
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  border: 0;
-  clip: rect(0 0 0 0);
-}
+
                                                             /*header*/
 
 
@@ -85,10 +76,11 @@ body {
 
 
                                                           /*section entry*/
-.entry {
+.background-photo-main {    /*не отображается*/
     background-image: url("../img/background_photo.png"); /*нет маски. хотя в файле есть маска*/
     background-repeat: no-repeat;
     background-color: var(--white);
+
 }
 
 h1 {
@@ -197,15 +189,18 @@ h1 {
   background-color: var(--brown);
   font-weight: bold;
   text-transform: uppercase;
+  border: none;
 }
 
 .search-hotel:hover {
   background-color: var(--brown-darcker);
+
 }
 
 .search-hotel:active {
   background-color: var(--brown-darckest);
   color: var(--white-opacity-light);
+
 }
                                                            /*search-help*/
 
@@ -239,6 +234,7 @@ h1 {
 
 .social {
     list-style: none;
+    display: inline-block;
     width:46px;
     height:48px;
 
@@ -258,17 +254,21 @@ h1 {
 }
 
 .social-twitter {
-    padding: 17px 15px;
+    /*padding: 17px 15px;*/
+    margin: 0 auto;
     display: inline-block;
   }
 
   .social-facebook {
-      padding: 13px 17px;
+
+    /*  padding: 13px 17px;*/
+
       display: inline-block;
   }
 
   .social-Youtube {
-      padding: 16px 13px;
+      /*padding: 16px 13px;*/
+      margin: 0 auto;
       display: inline-block;
   }
 
@@ -317,6 +317,7 @@ h1 {
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
+  border: none;
 }
 
 .modal input[type="submit"]:hover {
@@ -480,9 +481,26 @@ h1 {
 }
 
 .rating::before {
-  content: "";                                          /*звезда не отображается*/
+  content: "";                                            /*звезда не отображается*/
+
   background-image: url("../img/icon/star.svg");
-  background-repeat: repeat-x ;
+  background-repeat: repeat-x ;                            /*количество звезд*/
 }
                                                             /*filter-result*/
                                                               /*catalog*/
+
+
+
+                                                            /*visually-hidden*/
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+  }
+
+                                                          /*visually-hidden*/
