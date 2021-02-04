@@ -18,6 +18,7 @@
     --gray-up-dir: #CACACA;
     --light-black: #333333;
     --gray-hover: #EBEBEB;
+    --simple-opacity: rgba(0, 0, 0, 0);
 }
 
 body {
@@ -76,11 +77,21 @@ body {
 
 
                                                           /*section entry*/
-.background-photo-main {    /*не отображается*/
-    background-image: url("../img/background_photo.png"); /*нет маски. хотя в файле есть маска*/
+.background-photo-main {
+    background-image: url("../img/background_photo_without_mask.png");
     background-repeat: no-repeat;
     background-color: var(--white);
+    min-height: 509px;
+    z-index:2;
+}
 
+.mask-for-background {
+  background-image: url("../img/mask_for_background_photo.png");
+  background-repeat: no-repeat;
+  background-color: var(--white);
+  min-height: 272px;
+  bottom: 100px;
+  z-index: 1;
 }
 
 h1 {
@@ -143,21 +154,28 @@ h1 {
 }
 
 .profit-town li:nth-child(2)::before {
-  background-image: url(../img/food.png);/*не работает*/
+  background-image: url(../img/icon/food.svg);
   background-repeat: no-repeat;
   content: "";
+  min-height: 80px;
+  display: block;
 }
 
 .profit-town li:nth-child(1)::before {
-  background-image: url(../img/housing.png);/*не работает*/
+  background-image: url(../img/icon/housing.svg);
   background-repeat: no-repeat;
   content: "";
+  display: block;
+  min-height: 80px;
+
 }
 
 .profit-town li:nth-child(3)::before {
   content: "";
-  background-image: url(../img/souvenirs.png);/*не работает*/
+  background-image: url(../img/icon/souvenirs.svg);
   background-repeat: no-repeat;
+  min-height: 80px;
+  display: block;
 }
                                                            /*section list-profit*/
 
@@ -346,6 +364,7 @@ h1 {
     background-image: url("../img/background_for_catalog.png");
     background-color: var(--blue);
     background-repeat: no-repeat;
+    min-height: 217px;
 }
 
 .filter form {
@@ -361,19 +380,24 @@ h1 {
   line-height: 21px;
 }
 
-.filter input {                                    /*сделать поля прозрачными*/
+.filter input {
    text-transform: uppercase;
-    opacity: 0.1;
+    background-color: var(--simple-opacity);
     color: var(--white);
+    border: 1px solid var(--white);
 }
 
+/*input[type="checkbox"] {
+    background-color: var(--simple-opacity);
+    border: 1px solid var(--white);
+}*/                                              /*сделать поля checkbox прозрачными*/
 
 .text-label {
 /*  color: var(--white);*/
 }
 
 .filter fieldset {
-  /*  display: flex;*/
+    display: flex;
 
 }
 
@@ -480,12 +504,6 @@ h1 {
   background-color: var(--gray-input);
 }
 
-.rating::before {
-  content: "";                                            /*звезда не отображается*/
-
-  background-image: url("../img/icon/star.svg");
-  background-repeat: repeat-x ;                            /*количество звезд*/
-}
                                                             /*filter-result*/
                                                               /*catalog*/
 
@@ -504,3 +522,7 @@ h1 {
   }
 
                                                           /*visually-hidden*/
+
+.now_here {                              /*класс для ссылки на которой находимся*/
+  background-color: var(--brown);
+}
