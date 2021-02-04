@@ -86,7 +86,7 @@ body {
 }
 
 .mask-for-background {
-  background-image: url("../img/mask_for_background_photo.png");
+  background-image: url("../img/mask_for_background_photo.svg");
   background-repeat: no-repeat;
   background-color: var(--white);
   min-height: 272px;
