@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="page">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
@@ -12,7 +12,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   </head>
-  <body>
+
+  <body class="index-body">
+  <div class="back-color">
     <header class="main-header">
       <nav class="list-navigation">
           <ul>
@@ -35,66 +37,76 @@
       </nav>
     </header>
 
+
     <main class="index-main">
+
       <section class="entry">
-          <div class="background-photo-main"></div>
-          <div class="mask-for-background"></div>
+          <div class="background-with-mask">
+            <div class="background-photo-main"></div>
+            <div class="mask-for-background"></div>
+          </div>
           <!-- фотку и нижнюю рамку к ней положить фоном в CSS-->
-          <img src="img/welcome.svg" height="351" width="456" alt="welcome to the gorgeous Sedona, becouse thr grand canyon sucks!">   <!--SVG наверное размеры округленные. Конечно на белом фоне не видно-->
+          <img src="img/welcome.svg" height="351" width="456" alt="welcome to the gorgeous Sedona, becouse the grand canyon sucks!">   <!--SVG наверное размеры округленные. Конечно на белом фоне не видно-->
                   <!--<img src="#" height="29" width="256" alt="to the gorgeous">      -->                    <!--SVG наверное размеры округленные-->
         <!--  <img src="#" height="213" width="457" alt="Sedona, becouse thr grand canyon sucks!">  -->        <!--SVG наверное размеры округленные-->
-          <h1>Седона — небольшой городок в Аризоне, заслуживающий большего! </h1>
+
       </section>
       <section class="list-profit">
+          <h1>Седона — небольшой городок в Аризоне,<br>  заслуживающий большего! </h1>
         <h2>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</h2>
         <ul class="list-item-profit">
             <li>
-                <h3>Настоящий городок</h3>
-                <p>— №1 —</p>
-                <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
+                <div>
+                  <h3>Настоящий<br> городок</h3>
+                  <p class="numbers">— №1 —</p>
+                  <p>Седона - не аттракцион для туристов,<br> там течёт своя жизнь</p>
+                </div>
                 <img src="img/realtown.png" height="256" width="800" alt="фото города">
                 <ul class="profit-town">
                     <li>
                       <h4>Жильё</h4>
-                      <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+                      <p>Рекомендуем пожить в настоящем<br> мотеле, всё как в кино!</p>
                     </li>
                     <li>
                       <h4>Еда</h4>
-                      <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+                      <p>Всегда заказывайте фирменный бургер,<br>вы не разочаруетесь!</p>
                     </li>
                     <li>
                       <h4>Сувениры</h4>
-                      <p>Не только китайского, но и местного производства!</p>
+                      <p>Не только китайского, но и местного<br> производства!</p>
                     </li>
                 </ul>
             </li>
             <li>
-                <h3>Там есть  Мост дьявола</h3>
-                <p>— №2 —</p>
-                <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+                <div>
+                  <h3>Там есть<br>  Мост дьявола</h3>
+                  <p class="numbers">— №2 —</p>
+                  <p>Да, по нему можно пройти! Если конечно<br> вы осмелитесь</p>
+                </div>
                 <img src="img/devil's_bridge.png" height="256" width="800" alt="фото моста дьявола">
             </li>
-            <li>
+
+              <li>
                 <h3>Небольшая площадь</h3>
-                <p>— №3 —</p>
-                <p>Все достопримечательности находятся очень близко</p>
-            </li>
-            <li>
+                <p class="numbers">— №3 —</p>
+                <p>Все достопримечательности<br> находятся очень близко</p>
+              </li>
+              <li>
                 <h3>Красивая дорога</h3>
-                <p>— №4 —</p>
-                <p>Ехать в Седону из Лас-вегаса совсем не скучно!</p>
-            </li>
-            <li>
+                <p class="numbers">— №4 —</p>
+                <p>Ехать в Седону из Лас-вегаса совсем<br> не скучно!</p>
+              </li>
+              <li>
                 <h3>Мало туристов</h3>
-                <p>— №5 —</p>
-                <p>Большинство едет в гранд каньон и толпится там</p>
-            </li>
+                <p class="numbers">— №5 —</p>
+                <p>Большинство едет в гранд каньон<br> и толпится там</p>
+              </li>
 
         </ul>
       </section>
       <section class="search-help">
         <h2>Заинтересовались?</h2>
-        <p>  Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне  </p>
+        <p>  Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне  </p>
         <button class="search-hotel" type="button">Поиск гостиницы в Седоне</button> <!--checked-->
         <img src="img/map.png" height="594" width="1199" alt="карта Седоны">
       </section>
@@ -145,31 +157,34 @@
         <!--<img src="img/icon/logo-htmlacademy.svg" height="40" width="114" alt="logo-htmlacademy">--><!--размеры скругленные-->
       </a>
     </section>
+    <section class="modal" style="display:none;">
+      <form action="#!" method="get"><!-- id="search"-->
+        <label>
+            Дата заезда:<input type="text" name="Arrival_date" value="24 апреля 2017"><!-- id="Arrival"-->
+        </label><br>
+        <input type="image" src="img/icon/calendar.svg" alt="календарик">
+        <label>
+            Дата выезда:<input type="text" name="Date_of_departure" value="24 апреля 2017"><!-- id="departure"-->
+        </label><br>
+        <input type="image" src="img/icon/calendar.svg" alt="календарик">
+        <label>
+            Взрослые:<input type="text" name="adult" value="2"><!-- id="big"-->
+        </label>
+        <input type="image" src="img/icon/minus.svg" alt="-">
+        <input type="image" src="img/icon/plus.svg" alt="+">
+        <label>
+            Дети:<input type="text" name="children" value="0"><!-- id="child"-->
+        </label>
+        <input type="image" src="img/icon/minus.svg" alt="-">
+        <input type="image" src="img/icon/plus.svg" alt="+"><br>
+        <input type="submit" value="найти">
+      </form>
+    </section>
   </footer>
 
-  <section class="modal">
-    <form action="#!" method="get"><!-- id="search"-->
-      <label>
-          Дата заезда:<input type="text" name="Arrival_date" value="24 апреля 2017"><!-- id="Arrival"-->
-      </label><br>
-      <input type="image" src="img/icon/calendar.svg" alt="календарик">
-      <label>
-          Дата выезда:<input type="text" name="Date_of_departure" value="24 апреля 2017"><!-- id="departure"-->
-      </label><br>
-      <input type="image" src="img/icon/calendar.svg" alt="календарик">
-      <label>
-          Взрослые:<input type="text" name="adult" value="2"><!-- id="big"-->
-      </label>
-      <input type="image" src="img/icon/minus.svg" alt="-">
-      <input type="image" src="img/icon/plus.svg" alt="+">
-      <label>
-          Дети:<input type="text" name="children" value="0"><!-- id="child"-->
-      </label>
-      <input type="image" src="img/icon/minus.svg" alt="-">
-      <input type="image" src="img/icon/plus.svg" alt="+"><br>
-      <input type="submit" value="найти">
-    </form>
-  </section>
 
+  </div>
   </body>
+
+
 </html>

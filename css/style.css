@@ -21,26 +21,49 @@
     --simple-opacity: rgba(0, 0, 0, 0);
 }
 
-body {
+
+
+.index-body {
   font-family: "PT Sans", Arial, sans-serif;
-  background-color: var(--white);
-  min-width: 1200px;
+  background-color: var(--background-gray);     /*какой бек под какой ложится*/
+  width:inherit;
+    justify-content: center;
+    display: grid;
 }
 
+.back-color {
+
+
+
+
+    background-color: var(--white);     /*какой бек под какой ложится*/
+     /*какой бек под какой ложится*/
+  min-width: 1200px;                         /*min, max, auto, узнать*/
+  display: grid;
+  grid-template-columns: 1200px;
+}
+/*.main-header {
+  grid-column: auto;
+}*/
 
                                                             /*header*/
 
 
 .list-navigation {
+    background-color: var(--white);
     color: var(--black);
     text-transform: uppercase;
     font-weight: bold;
     font-size: 14px;
     line-height: 26px;
+    margin: 0;
+    padding: 0;
 }
 
 .list-navigation ul {
       list-style: none;
+      margin: 0;
+      padding: 0;
 }
 
 .list-navigation a {
@@ -80,18 +103,62 @@ body {
 .background-photo-main {
     background-image: url("../img/background_photo_without_mask.png");
     background-repeat: no-repeat;
-    background-color: var(--white);
-    min-height: 509px;
-    z-index:2;
+  /*  background-color: var(--white);*/
+    width: inherit;
+    height: 509px;
+  /*  position: relative;*/
+
+
+}
+
+/*.background-photo-main::after {
+  background-image: url("../img/mask_for_background_photo.svg");
+  background-repeat: no-repeat;
+
+  height: auto;
+  position: relative;
+  top: 74px;
+  width: inherit;
+
+  background-color: var(--simple-opacity);
+}            */                                                             /*не отображается почему*/
+
+.entry {
+
+  display: grid;
+}
+
+.entry img {
+  grid-row: 1/-1;
+  grid-column: 1/-1;
+/*  z-index: 2;*/
+  justify-self: center;
+  padding-top: 100px;
+}
+
+.background-with-mask {
+  background-color: var(--gray-icon-decor);
+  width: 1200px;
+  /*height: auto;*/
+/*  z-index: 1;*/
+  grid-row: 1/-1;
+  grid-column: 1/-1;
+/*не отображается почему*/
+/*  position: absolute; *//*какова хрена?*/
+
 }
 
 .mask-for-background {
-  background-image: url("../img/mask_for_background_photo.svg");
+  background-image: url("../img/mask.svg");
   background-repeat: no-repeat;
-  background-color: var(--white);
-  min-height: 272px;
-  bottom: 100px;
-  z-index: 1;
+  width: inherit;
+  height: 57px;
+  position: absolute;
+  bottom: 278px;
+
+  background-color: var(--simple-opacity);
+
+
 }
 
 h1 {
@@ -100,6 +167,9 @@ h1 {
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
+  text-align: center;
+  margin-top: 43px;
+  padding-bottom: 28px;
 }
 
 
@@ -107,21 +177,33 @@ h1 {
 
 
                                                             /*section list-profit*/
+/*.list-profit {
+  background-color: var(--white);
+}*/
+
 .list-profit h2 {
   color: var(--light-black);
   text-transform: uppercase;
+  font-weight: normal;
   font-size: 14px;
   line-height: 26px;
+  text-align: center;
+  margin-bottom: 51px;
 }
 
 .list-profit ul {
   list-style: none;
   text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
 }
 
 .list-profit h3, h4 {
   font-size: 21px;
   line-height: 21px;
+  text-align: center;
 }
 
 .list-profit p {
@@ -129,14 +211,50 @@ h1 {
   line-height: 21px;
 }
 
-.list-item-profit>li:nth-child(odd) {
+.list-item-profit>li:nth-child(1),
+ .list-item-profit>li:nth-child(2) {
+    grid-column: 1/-1;
     color: var(--white);
     background-color: var(--blue);
+    display: grid;
+    grid-template-columns: 400px 400px 400px;
+
 }
+
+.list-item-profit>li:nth-child(1) div {
+   grid-column: 1/2;
+   margin: auto;
+   grid-row: 1/2;
+   text-align: center;
+ }
+
+.numbers {
+  margin-top: 25px;
+  margin-bottom: 23px;
+  text-align: center;
+}
+
+
+ .list-item-profit>li:nth-child(2) div {
+      grid-column: 3/4;
+      grid-row: 1/2;
+      text-align: center;
+      vertical-align: middle;
+      margin: auto;
+ }
+
+ .list-item-profit>li:nth-child(1) img,
+  .list-item-profit>li:nth-child(2) img {
+
+    grid-row: 1/2;
+  }
 
 .list-item-profit>li:nth-child(n+3) {
     color: var(--light-black);
     background-color: var(--gray);
+    text-align: center;
+    padding-bottom: 54px;
+    padding-top: 47px;
 }
 
 .list-item-profit>li:nth-child(n+3) h3{
@@ -147,18 +265,42 @@ h1 {
 .profit-town {
     color: var(--black);
     background-color: var(--white);
+    text-align: center;
+
+    margin: 0;
+    padding: 0;
+
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: 400px 400px 400px;
+  /*  grid-template-rows: 330px;*/
 }
 
+.profit-town li{
+  margin-top: 55px;
+}
+
+
+
 .profit-town p{
+
     color: var(--light-black);
+    margin-bottom: 82px;
+   /* margin-left: 60px;
+    margin-right: 60px;*/
+
 }
 
 .profit-town li:nth-child(2)::before {
   background-image: url(../img/icon/food.svg);
   background-repeat: no-repeat;
+  background-position: center;
   content: "";
   min-height: 80px;
   display: block;
+
+
+/*  margin-bottom: 29px;*/
 }
 
 .profit-town li:nth-child(1)::before {
@@ -167,16 +309,44 @@ h1 {
   content: "";
   display: block;
   min-height: 80px;
-
+    background-position: center;
+      margin-bottom: 29px;
 }
 
 .profit-town li:nth-child(3)::before {
   content: "";
   background-image: url(../img/icon/souvenirs.svg);
   background-repeat: no-repeat;
+  background-position: center;
   min-height: 80px;
   display: block;
+
+    /*  margin-bottom: 29px;*/
 }
+
+
+
+/*
+.list-item-profit {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  display: grid;
+}*/
+/*
+.three-last-profit {
+  background-color: var(--gray);
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
+}
+
+.three-last-profit li:nth-child(n+1) {
+  text-align: center;
+  padding-bottom: 54px;
+  padding-top: 47px;
+}*/
+
+
                                                            /*section list-profit*/
 
 
@@ -184,6 +354,7 @@ h1 {
 .search-help {
     text-transform: uppercase;
     background-color: inherit;
+    text-align: center;
 }
 
 
@@ -192,12 +363,17 @@ h1 {
   font-size:  30px;
   line-height: 24px;
   font-weight: bold;
+  margin-top: 58px;
 }
 
 .search-help p{
+  display: block;
+  height: 95px;
   font-size: 14px;
   line-height: 24px;
   color: var(--light-black);
+  margin-top: 4px;
+  margin-bottom: 24px;
 }
 
 .search-hotel {
@@ -208,6 +384,8 @@ h1 {
   font-weight: bold;
   text-transform: uppercase;
   border: none;
+  height: 86px;
+  width: 568px;
 }
 
 .search-hotel:hover {
@@ -220,10 +398,21 @@ h1 {
   color: var(--white-opacity-light);
 
 }
+
+/*.search-hotel img {
+  z-index: 1;
+}*/
                                                            /*search-help*/
 
 
                                                            /*footer*/
+.main-footer {
+
+  display: grid;                                                        /*наложить на карту*/
+  grid-template-columns: 400px 400px 400px;
+  text-align: center;
+}
+
 .main-footer {
     background-color: var(--white-opacity);
     color: var(--black);
@@ -241,6 +430,7 @@ h1 {
   text-decoration: none;
   list-style: none;
   color: inherit;
+
 }
 
 .site-developer p {
@@ -248,6 +438,8 @@ h1 {
   line-height: 26px;
   font-weight: normal;
 }
+
+
                                                               /*social*/
 
 .social {
