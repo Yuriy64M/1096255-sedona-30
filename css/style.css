@@ -25,31 +25,36 @@
 
 .index-body {
   font-family: "PT Sans", Arial, sans-serif;
-  background-color: var(--background-gray);     /*какой бек под какой ложится*/
-  width:inherit;
+  background-color: var(--white);
+    position: relative;
     justify-content: center;
     display: grid;
+    grid-template-columns: 1fr 1200px 1fr;
+    box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);               /*тень отсутствует*/
 }
 
-.back-color {
-
-
-
-
-    background-color: var(--white);     /*какой бек под какой ложится*/
-     /*какой бек под какой ложится*/
-  min-width: 1200px;                         /*min, max, auto, узнать*/
-  display: grid;
-  grid-template-columns: 1200px;
+.ears-left {
+  grid-column: 1/2;                              /*впаял 2 уха, хотелось бы обойтись 1. координаты 1/-1 не работают */
+  grid-row: 1/5;
+  background-color: var(--gray-input);
 }
-/*.main-header {
-  grid-column: auto;
-}*/
+
+.ears-right {
+  grid-column: 3/4;
+  grid-row: 1/5;
+  background-color: var(--gray-input);
+}
+
+
+ /*min, max, auto, узнать*/
 
                                                             /*header*/
-
+.main-header {
+  grid-column: 2/3;
+}
 
 .list-navigation {
+    position: relative;
     background-color: var(--white);
     color: var(--black);
     text-transform: uppercase;
@@ -58,28 +63,43 @@
     line-height: 26px;
     margin: 0;
     padding: 0;
+
 }
 
 .list-navigation ul {
       list-style: none;
       margin: 0;
       padding: 0;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+}
+
+.list-navigation li:nth-child(2), .list-navigation li:nth-child(3) {
+  margin: auto;
+}
+
+.list-navigation li:nth-child(1) {
+  margin-left: 72px;
+}
+
+.list-navigation li:nth-child(4) {
+  margin-right: 72px;
+}
+
+.logotype {
+position: absolute;
+  top: 0;
+  left: 531px;
+  z-index: 2;
 }
 
 .list-navigation a {
       text-decoration: none;
       color: var(--black);
 }
-
-/*.list-navigation a:link {
-      text-decoration: none;
-      color: var(--black);
-}*/                                                          /*четвертое состояние в стайлгаде. Что и Как*/
-
-/*.list-navigation a:visited {
-      text-decoration: none;
-      color: var(--brown);
-}*/
 
 .list-navigation a:hover {
       text-decoration: none;
@@ -97,68 +117,42 @@
     }
 
                                                               /*header*/
-
-
-                                                          /*section entry*/
-.background-photo-main {
-    background-image: url("../img/background_photo_without_mask.png");
-    background-repeat: no-repeat;
-  /*  background-color: var(--white);*/
-    width: inherit;
-    height: 509px;
-  /*  position: relative;*/
-
-
+.index-main {
+  grid-column: 2/3;
 }
 
-/*.background-photo-main::after {
-  background-image: url("../img/mask_for_background_photo.svg");
+                                                          /*section entry*/
+.background-photo-main::after {
+  background-image: url("../img/mask.svg");
   background-repeat: no-repeat;
-
-  height: auto;
-  position: relative;
-  top: 74px;
-  width: inherit;
-
+  content: "";
+  width: 1200px;
+  height: 57px;
+  position: absolute;
+  bottom: 0;
   background-color: var(--simple-opacity);
-}            */                                                             /*не отображается почему*/
+}
+
+.background-photo-main {
+  position: relative;
+    background-image: url("../img/background_photo_without_mask.png");
+    background-repeat: no-repeat;
+    height: 509px;
+}
+
+
 
 .entry {
-
+  position: relative;
   display: grid;
 }
 
 .entry img {
-  grid-row: 1/-1;
-  grid-column: 1/-1;
-/*  z-index: 2;*/
   justify-self: center;
-  padding-top: 100px;
-}
-
-.background-with-mask {
-  background-color: var(--gray-icon-decor);
-  width: 1200px;
-  /*height: auto;*/
-/*  z-index: 1;*/
+  position: absolute;
   grid-row: 1/-1;
   grid-column: 1/-1;
-/*не отображается почему*/
-/*  position: absolute; *//*какова хрена?*/
-
-}
-
-.mask-for-background {
-  background-image: url("../img/mask.svg");
-  background-repeat: no-repeat;
-  width: inherit;
-  height: 57px;
-  position: absolute;
-  bottom: 278px;
-
-  background-color: var(--simple-opacity);
-
-
+  padding-top: 100px;
 }
 
 h1 {
@@ -177,9 +171,6 @@ h1 {
 
 
                                                             /*section list-profit*/
-/*.list-profit {
-  background-color: var(--white);
-}*/
 
 .list-profit h2 {
   color: var(--light-black);
@@ -266,14 +257,11 @@ h1 {
     color: var(--black);
     background-color: var(--white);
     text-align: center;
-
     margin: 0;
     padding: 0;
-
     grid-column: 1/-1;
     display: grid;
     grid-template-columns: 400px 400px 400px;
-  /*  grid-template-rows: 330px;*/
 }
 
 .profit-town li{
@@ -283,12 +271,8 @@ h1 {
 
 
 .profit-town p{
-
     color: var(--light-black);
     margin-bottom: 82px;
-   /* margin-left: 60px;
-    margin-right: 60px;*/
-
 }
 
 .profit-town li:nth-child(2)::before {
@@ -298,9 +282,6 @@ h1 {
   content: "";
   min-height: 80px;
   display: block;
-
-
-/*  margin-bottom: 29px;*/
 }
 
 .profit-town li:nth-child(1)::before {
@@ -309,8 +290,8 @@ h1 {
   content: "";
   display: block;
   min-height: 80px;
-    background-position: center;
-      margin-bottom: 29px;
+  background-position: center;
+  margin-bottom: 29px;
 }
 
 .profit-town li:nth-child(3)::before {
@@ -320,38 +301,14 @@ h1 {
   background-position: center;
   min-height: 80px;
   display: block;
-
-    /*  margin-bottom: 29px;*/
 }
-
-
-
-/*
-.list-item-profit {
-  list-style: none;
-  padding: 0px;
-  margin: 0px;
-  display: grid;
-}*/
-/*
-.three-last-profit {
-  background-color: var(--gray);
-  display: grid;
-  grid-template-columns: 400px 400px 400px;
-}
-
-.three-last-profit li:nth-child(n+1) {
-  text-align: center;
-  padding-bottom: 54px;
-  padding-top: 47px;
-}*/
-
 
                                                            /*section list-profit*/
 
 
                                                            /*search-help*/
 .search-help {
+    position: relative;
     text-transform: uppercase;
     background-color: inherit;
     text-align: center;
@@ -390,70 +347,93 @@ h1 {
 
 .search-hotel:hover {
   background-color: var(--brown-darcker);
-
 }
 
 .search-hotel:active {
   background-color: var(--brown-darckest);
   color: var(--white-opacity-light);
-
 }
 
-/*.search-hotel img {
-  z-index: 1;
-}*/
                                                            /*search-help*/
 
 
                                                            /*footer*/
-.main-footer {
 
-  display: grid;                                                        /*наложить на карту*/
-  grid-template-columns: 400px 400px 400px;
-  text-align: center;
-}
 
 .main-footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
     background-color: var(--white-opacity);
     color: var(--black);
     font-size: 21px;
     line-height: 26px;
     font-weight: bold;
     text-transform: uppercase;
+    grid-column: 2/3;
+    width: 1200px;
+    min-height: 120px;
 }
 
 .contacts, .contacts a {
+
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
+  padding: 0;
+  margin: 0;
   text-transform: uppercase;
   text-decoration: none;
   list-style: none;
   color: inherit;
+}
+
+.contacts p {
+  padding: 0;
+  margin: 0;
 
 }
 
-.site-developer p {
-  font-size: 14px;
-  line-height: 26px;
-  font-weight: normal;
+.contacts {
+  align-self: center;
+  margin-bottom: 9px;
 }
-
-
                                                               /*social*/
+
+.list-social {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
 
 .social {
     list-style: none;
-    display: inline-block;
-    width:46px;
-    height:48px;
+    background-color: var(--blue);
+    margin-right: 6px;
 
-  /*  background-color: var(--blue);*/
+
 }
 
 .social-item {
-    background-color: var(--blue);
+
+
+  display: flex;
+  width:46px;
+  height:48px;
+  background-color: var(--blue);
+
+
 }
+
+.social-item svg{
+  display: flex;
+  margin: auto;
+}
+
 
 .social-item:hover {
     background-color: var(--blue-hover);
@@ -463,55 +443,142 @@ h1 {
     background-color: var(--blue-active);
 }
 
-.social-twitter {
-    /*padding: 17px 15px;*/
-    margin: 0 auto;
-    display: inline-block;
-  }
-
-  .social-facebook {
-
-    /*  padding: 13px 17px;*/
-
-      display: inline-block;
-  }
-
-  .social-Youtube {
-      /*padding: 16px 13px;*/
-      margin: 0 auto;
-      display: inline-block;
-  }
-
-  .social-Youtube:active svg, .social-facebook:active svg, .social-twitter:active svg{
+  .social-Youtube:active svg,
+   .social-facebook:active svg,
+    .social-twitter:active svg{
       opacity: 0.3;
   }
-                                                            /*social*/
+                                                          /*social*/
 
-.site-developer svg:hover {
-    background-color: var(--blue); /*атрибут fill менять с помощью JS*/
+                                                          /*developer*/
+    .site-developer p {
+      margin-right: 8px;
+      font-size: 14px;
+      line-height: 26px;
+      font-weight: normal;
+    }
 
-}
+    .site-developer a:hover path {
+      fill:var(--blue);
+    }
+
+    .site-developer a:active path {
+      fill:var(--black-opacity);
+    }
+
+    .site-developer {
+
+      display: flex;
+      align-self: center;
+    }
+
+                                                          /*developer*/
                                                             /*footer*/
 
 
                                                             /*modal*/
 
 .modal {
+
+    position: absolute;
+    left: 316px;
+    bottom: 202px;
+  /*  z-index: 1;*/
+    /*text-align: center;       */     /*не центрируется*/
+    justify-content: center;
     color: var(--black);
     font-weight: bold;
     font-size: 14px;
     line-height: 26px;
     text-transform: uppercase;
+    width: 568px;
+    height: 395px;
+    box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+    background-color: var(--white);
+  /*  display: grid;
+/*    grid-template-columns: 1fr 200px 200px 1fr;*/
 }
 
-.modal input {
+.modal form {
+  display: flex;
+  flex-wrap: wrap;
+align-items:baseline;
+  margin: 55px;
+
+
+}
+
+/*.modal label {
+
+  margin-left: 55px;
+}*/
+
+.modal label {
+margin-right: auto;
+}
+
+.modal label[for="child"] {
+margin-left: auto;
+
+}
+
+.modal p {
+  max-height: 38px;
+margin: 0;
+padding: 0;
+
+margin-bottom: 30px;
+position: relative;
+
+}
+
+
+.modal input[type="text"] {
+  padding-left: 12px;
   color: var(--black);
   font-weight: bold;
   font-size: 14px;
   line-height: 26px;
   text-transform: uppercase;
   background-color: var(--gray-input);
+  width: 332px;
+  height: 38px;
+  border: none;
+
 }
+
+.modal .calendar {                    /*не фокусится*/
+  position:absolute;
+  margin-left: -30px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.modal .minus {                        /*не фокусится*/
+  position:absolute;
+  margin-left: -100px;
+  margin-top: 3px;
+  cursor: pointer;
+}
+
+.modal .plus {                        /*не фокусится*/
+  position:absolute;
+  margin-left: -25px;
+  margin-top: 7px;
+  cursor: pointer;
+}
+
+.minus:hover rect,
+ .plus:hover path,
+  .calendar:hover path {
+    fill: var(--black);
+  }
+
+  .minus:active rect,
+   .plus:active path,
+    .calendar:active path {
+      fill: var(--blue);
+    }
 
 .modal input[type="text"]:hover {
   background-color: var(--gray-hover);
@@ -528,6 +595,10 @@ h1 {
   font-size: 21px;
   line-height: 26px;
   border: none;
+  width: 458px;
+  height: 58px;
+  align-self: stretch;
+  margin-top: 24px;
 }
 
 .modal input[type="submit"]:hover {
@@ -537,6 +608,21 @@ h1 {
 .modal input[type="submit"]:active {
   background-color: var(--blue-active);
   color: var(--white-opacity-light);
+  /*border: none;*/
+}
+
+ .modal input[name="children"] {
+  width: 114px;
+  padding: 0;
+  text-align: center;
+  /*margin-left: 53px;*/
+}
+
+.modal input[name="adult"] {
+ width: 114px;
+ padding: 0;
+ text-align: center;
+
 }
                                                             /*modal*/
 
