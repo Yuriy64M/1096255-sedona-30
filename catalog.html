@@ -43,7 +43,7 @@
       <form  class="filter-form" action="https://echo.htmlacademy.ru/" method="get">
         <fieldset>
           <legend>Инфраструктура:</legend>
-          <input class="visually-hidden filter-checkbox" type="checkbox" name="pool" id="pool" checked>
+          <input class="visually-hidden filter-checkbox" type="checkbox" name="pool" id="pool" checked >
           <label class="catalog-filter" for="pool" tabindex="0">Бассейн</label>
           <input class="visually-hidden filter-checkbox" type="checkbox" name="parking" id="parking">
           <label class="catalog-filter" for="parking" tabindex="0">Парковка</label>
@@ -63,8 +63,8 @@
           <legend>Стоимость в сутки (Р):</legend>
           <div class="from-to">
             <div class="stick"></div>
-            <input class="from" type="text" name="from" value="от 0">
-            <input class="to" type="text" name="to" value="До 3000"><br>
+            <input class="from" type="text" name="from" placeholder="от 0">
+            <input class="to" type="text" name="to" placeholder="До 3000"><br>
           </div>
           <div class="range">
             <div class="scale">
@@ -84,19 +84,19 @@
       <div class="sorting-left">
         <h2>Найдено: 3</h2>
         <p>Сортировка:</p>
-        <a href="#!" class="selected-sorting">По цене</a>
-        <a href="#!">По типу</a>
-        <a href="#!">По рейтингу</a>
+        <a href="#!" class="sorting-link selected-sorting">По цене</a>
+        <a href="#!" class="sorting-link">По типу</a>
+        <a href="#!" class="sorting-link">По рейтингу</a>
       </div>
       <div class="arrows">
-        <a href="#!">
+        <a href="#!" class="color-arrow">
           <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA"/>
           </svg>
          </a>
-        <a href="#!">
+        <a href="#!" class="color-arrow">
           <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA"/>
+            <path  d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA" class="color-arrow-selected"/>
           </svg>
          </a>
       </div>
