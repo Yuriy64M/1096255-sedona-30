@@ -567,7 +567,7 @@ h1 {
   line-height: 26px;
   text-transform: uppercase;
   background-color: var(--gray-input);
-  width: 332px;
+  width: 346px;
   min-height: 38px;
   border: none;
 }
@@ -611,6 +611,21 @@ h1 {
 
 .modal input[type="text"]:focus {
   background-color: var(--white);
+}
+
+input[name="Date_of_departure"]::placeholder,
+input[name="Arrival_date"]::placeholder {
+  color: var(--black);
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 26px;
+  text-transform: uppercase;
+}
+
+input[name="Date_of_departure"],
+input[name="Arrival_date"] {
+  box-sizing: border-box;
+  padding-right: 40px;
 }
 
 .modal button {
@@ -835,6 +850,15 @@ h1 {
   height: 36px;
   border: 2px solid var(--white);
   border-radius: 2px;
+}
+
+.from::placeholder,
+.to::placeholder {
+  font-family: "PT Sans", Arial, sans-serif;
+  color: var(--white);
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
 }
 
 .stick {
@@ -1198,4 +1222,31 @@ input[name="to"] {
   display: none;
 }
 
-.animation-modal {}
+.animation-modal {
+  animation-name: dropping ;
+  animation-duration:0.1s;
+  animation-fill-mode: both;
+}
+
+.animation-modal-two {
+  animation-name: dropping-two;
+  animation-duration:0.5s;
+  animation-fill-mode: both;
+}
+
+@keyframes dropping {
+  100% {
+    transform-origin: top;
+    transform: scaleY(0);
+  }
+}
+
+@keyframes dropping-two {
+  0% {
+    transform-origin: top;
+    transform: scaleY(0);}
+  100%{
+    transform-origin: top;
+    transform: scaleY(1);
+  }
+}
