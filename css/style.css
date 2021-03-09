@@ -362,6 +362,9 @@ h1 {
 }
 
 .search-hotel {
+  position: absolute;
+  right: 0;
+  z-index: 1;
   color: var(--white);
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 21px;
@@ -509,11 +512,24 @@ h1 {
 
 
                                                                             /*modal*/
+.wrapper-search-hotel {
+  position: absolute;
+  overflow: hidden;
+  left: 315px;
+  width: 568px;
+  min-height: 482px;
+  background-color: var(--simple-opacity);
+}
+
+.wrapper-search {
+  position: relative;
+  min-height: 232px;
+}
 
 .modal {
   position: absolute;
-  left: 316px;
-  bottom: 202px;
+  left: 0;
+  top: -85%;
   justify-content: center;
   color: var(--black);
   font-family: "PT Sans", Arial, sans-serif;
@@ -1222,31 +1238,15 @@ input[name="to"] {
   display: none;
 }
 
-.animation-modal {
-  animation-name: dropping ;
-  animation-duration:0.1s;
-  animation-fill-mode: both;
-}
-
 .animation-modal-two {
   animation-name: dropping-two;
   animation-duration:0.5s;
   animation-fill-mode: both;
 }
 
-@keyframes dropping {
+@keyframes dropping-two {
   100% {
     transform-origin: top;
-    transform: scaleY(0);
-  }
-}
-
-@keyframes dropping-two {
-  0% {
-    transform-origin: top;
-    transform: scaleY(0);}
-  100%{
-    transform-origin: top;
-    transform: scaleY(1);
+    top:86px;
   }
 }
