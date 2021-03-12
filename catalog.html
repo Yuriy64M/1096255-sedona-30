@@ -8,7 +8,7 @@
   <link rel="apple-touch-icon" href="img/icon/favicon180.png">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
@@ -18,7 +18,7 @@
     <nav class="list-navigation">
       <ul>
         <li>
-          <a  href="#!">Информация</a> <!--class="now_here"-->
+          <a  href="#!">Информация</a>
         </li>
         <li>
           <a href="#!">Фото и видео</a>
@@ -64,7 +64,9 @@
           <div class="from-to">
             <div class="stick"></div>
               <input class="from" type="text" name="from" id="from_price" placeholder="от 0">
+              <label class="visually-hidden" for="from_price">минимальная цена за отель</label>
               <input class="to" type="text" name="to" id="to_price" placeholder="До 3000"><br>
+              <label class="visually-hidden" for="to_price">максимальная цена за отель</label>
             </div>
           <div class="range">
             <div class="scale">
@@ -73,10 +75,10 @@
                 margin-left: 0%">
               </div>
             </div>
-            <div class="toggle toggle-min" tabindex="0" style="left:0%;"></div>
-            <div class="toggle toggle-max" tabindex="0" style="left:80%;"></div>
+            <div class="toggle toggle-min" tabindex="0" style="left:0%;" aria-label="ручка для выбора минимальной цены за гостиницу"></div>
+            <div class="toggle toggle-max" tabindex="0" style="left:80%;" aria-label="ручка для выбора максимальной цены за гостиницу"></div>
           </div>
-          <button type="submit">показать</button>
+          <button type="submit" aria-label="показать результат поиска гостиницы">показать</button>
         </fieldset>
       </form>
     </section>
@@ -89,12 +91,12 @@
         <a href="#!" class="sorting-link">По рейтингу</a>
       </div>
       <div class="arrows">
-        <a href="#!" class="color-arrow">
+        <a href="#!" class="color-arrow" aria-label="стрелка сортировки вверх">
           <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA"/>
           </svg>
          </a>
-        <a href="#!" class="color-arrow">
+        <a href="#!" class="color-arrow" aria-label="стрелка сортировки вниз">
           <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path  d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA" class="color-arrow-selected"/>
           </svg>

@@ -8,7 +8,7 @@
   <link rel="apple-touch-icon" href="img/icon/favicon180.png">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
@@ -81,17 +81,17 @@
         </li>
 
         <li>
-          <h3>Небольшая<br> площадь</h3>
+          <h3 class="list-item-profit-three-last-header">Небольшая<br> площадь</h3>
           <p class="numbers">— №3 —</p>
           <p>Все достопримечательности<br> находятся очень близко</p>
         </li>
         <li>
-          <h3>Красивая<br> дорога</h3>
+          <h3 class="list-item-profit-three-last-header">Красивая<br> дорога</h3>
           <p class="numbers">— №4 —</p>
           <p>Ехать в Седону из Лас-вегаса совсем<br> не скучно!</p>
         </li>
         <li>
-          <h3>Мало<br> туристов</h3>
+          <h3 class="list-item-profit-three-last-header">Мало<br> туристов</h3>
           <p class="numbers">— №5 —</p>
           <p>Большинство едет в гранд каньон<br> и толпится там</p>
         </li>
@@ -102,8 +102,8 @@
         <h2>Заинтересовались?</h2>
         <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         <div class="wrapper-search-hotel">
-          <button class="search-hotel" type="button">Поиск гостиницы в Седоне</button>
-          <section class="modal search-hotel-clicked">
+          <button class="search-hotel" type="button" aria-label="открытие-закрытие формы поиска гостиницы">Поиск гостиницы в Седоне</button>
+          <section class="modal search-hotel-open">
         <form action="https://echo.htmlacademy.ru/" method="post">
           <label for="Arrival">Дата заезда:</label>
           <p>
@@ -176,12 +176,12 @@
             </a>
           </p>
 
-          <button type="submit">найти</button>
+          <button type="submit" aria-label="отправить форму поиска гостиницы">найти</button>
         </form>
       </section>
         </div>
       </div>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18516.222882406946!2d-111.76871372099073!3d34.87540231352583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1614860380317!5m2!1sru!2sru" width="1200" height="594" style="border:0;" allowfullscreen="" loading="lazy" title="карта Седоны"></iframe>
+      <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18516.222882406946!2d-111.76871372099073!3d34.87540231352583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1614860380317!5m2!1sru!2sru" width="1200" height="594" style="border:0;" allowfullscreen="" loading="lazy" title="карта Седоны"></iframe>
 
     </section>
   </main>
@@ -233,7 +233,7 @@
     </section>
 
   </footer>
- <script src="js/scriptmodal.min.js"></script>
+ <script src="js/scriptmodal.js"></script>
 </body>
 
 

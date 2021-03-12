@@ -140,6 +140,7 @@
 .entry {
   position: relative;
   display: grid;
+  background-color: var(--blue-active);
 }
 
 .entry img {
@@ -257,7 +258,7 @@ h1 {
   padding-top: 26px;
 }
 
-.list-item-profit>li:nth-child(n+3) h3{
+.list-item-profit-three-last-header{
   color: var(--black);
 }
 
@@ -386,6 +387,9 @@ h1 {
   color: var(--white-opacity-light);
 }
 
+.map {
+  background-image: url("../img/map.png");
+}
                                                                           /*search-help*/
 
 
@@ -589,6 +593,10 @@ h1 {
   border: none;
 }
 
+.search-hotel-open {
+  transform: translateY(125%);
+}
+
 .modal .calendar {
   position:absolute;
   right: 9px;
@@ -635,8 +643,9 @@ input[name="Arrival_date"]::placeholder {
   color: var(--black);
   font-weight: bold;
   font-size: 14px;
-  line-height: 26px;
+/*  line-height: 26px;*/
   text-transform: uppercase;
+  opacity: 1;
 }
 
 input[name="Date_of_departure"],
@@ -776,6 +785,10 @@ input[name="Arrival_date"] {
   user-select: none;
 }
 
+.filter input[type="checkbox"]:disabled {
+  background-color: var(--blocked);
+}
+
 .filter fieldset {
   padding: 0;
   margin: 0;
@@ -875,7 +888,7 @@ input[name="Arrival_date"] {
   color: var(--white);
   font-weight: normal;
   font-size: 14px;
-  line-height: 21px;
+  opacity: 1;
 }
 
 .stick {
@@ -893,11 +906,13 @@ input[name="from"] {
   border: none;
   text-align: center;
   color: var(--white);
+  width: 50%;
 }
 
 input[name="to"] {
   border: none;
   text-align: center;
+  width: 50%;
 }
 
 .range {
@@ -1229,10 +1244,6 @@ input[name="to"] {
 
 .color-arrow-selected {
   fill: var(--blue);
-}
-
-.filter-input-blocked {
-  background-color: var(--blocked);
 }
 
 .search-hotel-clicked {
