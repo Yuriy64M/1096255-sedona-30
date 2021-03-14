@@ -211,8 +211,8 @@ h1 {
   padding-bottom: 2px;
 }
 
-.list-item-profit>li:nth-child(1),
-.list-item-profit>li:nth-child(2) {
+.first-item-list-profit,
+.second-item-list-profit {
   grid-column: 1/-1;
   color: var(--white);
   background-color: var(--blue);
@@ -220,7 +220,7 @@ h1 {
   grid-template-columns: 400px 400px 400px;
 }
 
-.list-item-profit>li:nth-child(1) div {
+.first-item-list-profit div {
   grid-column: 1/2;
   padding-top: 28px;
   grid-row: 1/2;
@@ -238,15 +238,15 @@ h1 {
 }
 
 
-.list-item-profit>li:nth-child(2) div {
+.second-item-list-profit div {
   grid-column: 3/4;
   grid-row: 1/2;
   text-align: center;
   padding-top: 32px;
 }
 
-.list-item-profit>li:nth-child(1) img,
-.list-item-profit>li:nth-child(2) img {
+.first-item-list-profit img,
+.second-item-list-profit img {
   grid-row: 1/2;
 }
 
